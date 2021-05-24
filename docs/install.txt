@@ -1,0 +1,7 @@
+npm install -g typescript
+tsc --version
+tsc file.ts //converts the file to file.js, omits the config
+tsc --watch file.ts //is watching the file and compiling to file.js
+tsc --init //allows create file config.ts
+tsc //search all config files in the
+tsc --project name-project //specify a dir that contains the config files
