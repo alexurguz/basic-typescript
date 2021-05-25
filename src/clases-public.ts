@@ -9,18 +9,18 @@ enum PhotoOrientation {
 
 class Picture {
 	// Propiedades
-	id: number;
-	title: string;
-	orientation: PhotoOrientation;
+	public id: number;
+	public title: string;
+	public orientation: PhotoOrientation;
 
-	constructor(id: number, title: string, orientation: PhotoOrientation) {
+	public constructor(id: number, title: string, orientation: PhotoOrientation) {
 		this.id = id;
 		this.title = title;
 		this.orientation = orientation;
 	}
 
 	// Comportamiento
-	toString() {
+	public toString() {
 		return `[id: ${this.id}, 
                  title: ${this.title}, 
                  orientation: ${this.orientation}]`;
@@ -28,17 +28,17 @@ class Picture {
 }
 
 class Album {
-	id: number;
-	title: string;
-	pictures: Picture[];
+	public id: number;
+	public title: string;
+	public pictures: Picture[];
 
-	constructor(id: number, title: string) {
+	public constructor(id: number, title: string) {
 		this.id = id;
 		this.title = title;
 		this.pictures = [];
 	}
 
-	addPicture(picture: Picture) {
+	public addPicture(picture: Picture) {
 		this.pictures.push(picture);
 	}
 }
