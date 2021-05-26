@@ -14,5 +14,5 @@ album.addPicture(picture);
 console.log('user', user);
 
 // Borramos Album
-user.removeAlbum(album.id);
+user.removeAlbum(album);
 console.log('user', user);
