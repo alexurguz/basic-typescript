@@ -11,8 +11,14 @@ export class User {
 		this.album.push(album);
 	}
 
-	removeAlbum(id: number): void {
-		const newArr = this.album.filter((a) => a.id !== id);
-		this.album = newArr;
+	removeAlbum(album: Album): Album | undefined {
+		// Buscar Album
+		const index = this.album.findIndex((a) => a.id === album.id);
+		let deletedAlbum;
+		if (index >= 0) {
+			deletedAlbum = this.album[index];
+			this.album.splice(index, 1);
+		}
+		return deletedAlbum;
 	}
 }
